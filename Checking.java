@@ -5,9 +5,10 @@ public class Checking {
         return f;
     }
 
-    static public boolean intCheck(String balance) {
-        boolean f;
-        f = !balance.isEmpty() && balance.matches("^[0-9]+");
+    static public int intCheck(String balance) {
+        int f;
+        if (!balance.isEmpty() && balance.matches("^[0-9]+")) f = 1;
+        else f = 0;
         return f;
     }
 

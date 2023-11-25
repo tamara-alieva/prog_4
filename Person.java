@@ -42,7 +42,7 @@ public class Person {
 
     public void input() {
         Scanner scanner = new Scanner(System.in);
-        String temp; boolean flag;
+        String temp; boolean flag; int f;
         System.out.println("** Ввод данных человека **");
         do {
             System.out.print("Введите имя: ");
@@ -54,9 +54,9 @@ public class Person {
         do {
             System.out.print("Введите баланс: ");
             temp = scanner.nextLine();
-            flag = Checking.intCheck(temp);
-            if (!flag) System.out.print("Попробуйте ещё раз. ");
-        } while (!flag);
+            f = Checking.intCheck(temp);
+            if (f == 0) System.out.print("Попробуйте ещё раз. ");
+        } while (f == 0);
         this.balance = Integer.parseInt(temp);
         System.out.println("Данные успешно введены!\n");
     }

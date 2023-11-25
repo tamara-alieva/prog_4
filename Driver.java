@@ -47,22 +47,22 @@ public class Driver extends Person {
     @Override
     public void input() {
         Scanner scanner = new Scanner(System.in);
-        String temp = ""; boolean flag;
+        String temp = ""; int flag;
         System.out.println("** Ввод данных водителя: " + this.getName() + " **");
         do {
             System.out.print("Введите количество лет опыта: ");
             temp = scanner.nextLine();
             flag = Checking.intCheck(temp);
-            if (!flag) System.out.print("Попробуйте ещё раз. ");
-        } while (!flag);
+            if (flag == 0) System.out.print("Попробуйте ещё раз. ");
+        } while (flag == 0);
         this.experience = Integer.parseInt(temp);
         temp = "";
         do {
             System.out.print("Введите количество выполненных заказов: ");
             temp = scanner.nextLine();
             flag = Checking.intCheck(temp);
-            if (!flag) System.out.print("Попробуйте ещё раз. ");
-        } while (!flag);
+            if (flag == 0) System.out.print("Попробуйте ещё раз. ");
+        } while (flag == 0);
         this.orderAmount = Integer.parseInt(temp);
         System.out.println("Данные успешно введены!\n");
     }
