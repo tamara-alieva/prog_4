@@ -22,5 +22,14 @@ public class Main {
         System.out.println("3) Метод intCheck вспомогательного класса Checking");
         Driver driver = new Driver();
         driver.input(); // Вызов intCheck
+
+        System.out.println("4) Использование оператора this (во всех конструкторах классов)");
+        Fuel fuel = new Fuel();
+        fuel.output();
+
+        System.out.println("5) Обработка строк");
+        buffer = "Volvo";
+        car_array[1].setBrand(buffer);
+        System.out.println("Возврат String: " + car_array[1].getBrand());
     }
 }
