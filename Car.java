@@ -1,10 +1,9 @@
-package src;
 import java.util.Scanner;
 
-import Checking;
-import Fuel;
-
 public class Car {
+
+    private static int numberOfCars = 0;
+
     private String brand;
     private boolean rate;
     protected Fuel fuel;
@@ -13,24 +12,28 @@ public class Car {
         this.fuel = new Fuel();
         this.brand = "";
         this.rate = false;
+        numberOfCars++;
     }
 
     public Car(String brand) {
         this.fuel = new Fuel();
         this.brand = brand;
         this.rate = false;
+        numberOfCars++;
     }
 
     public Car(boolean rate) {
         this.fuel = new Fuel();
         this.brand = "";
         this.rate = rate;
+        numberOfCars++;
     }
 
     public Car(String brand, boolean rate) {
         this.fuel = new Fuel();
         this.brand = brand;
         this.rate = rate;
+        numberOfCars++;
     }
 
     public void setBrand(String brand) {
@@ -47,6 +50,10 @@ public class Car {
 
     public boolean getRate() {
         return this.rate;
+    }
+
+    public static int getNumberOfCars() {
+        return numberOfCars;
     }
 
     public void input() {
