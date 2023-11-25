@@ -18,5 +18,9 @@ public class Main {
         System.out.println("2) Статическое поле numberOfCars и метод getNumberOfCars");
         System.out.println("Количество созданных объектов Car: " + Car.getNumberOfCars());
         System.out.println();
+
+        System.out.println("3) Метод intCheck вспомогательного класса Checking");
+        Driver driver = new Driver();
+        driver.input(); // Вызов intCheck
     }
 }
